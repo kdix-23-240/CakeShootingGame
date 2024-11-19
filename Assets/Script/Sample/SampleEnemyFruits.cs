@@ -6,7 +6,7 @@ public class SampleEnemyFruits : BulletStraight
 {
     public SampleEnemyFruits()
     {
-        this.power = 10;//攻撃力
+        this.power = 1;//攻撃力
         this.shootRange = 6f;//射程
         this.shootPositionX = 0;//弾の発射位置
         this.shootPositionY = -1f;//弾の発射位置

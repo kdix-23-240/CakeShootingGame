@@ -13,7 +13,7 @@ public class ButtonMachineSelecter : MonoBehaviour
 
     public void OnClick()
     {
-        SceneManager.LoadScene("Shooting");
+        SceneManager.LoadScene(SelectedStageKeeper.GetInstance().GetSelectedStage());
         this.cakeMaker = new CakeMaker(materialNum, creamNum, fruitsNum);
         this.cakeMaker.MakeCake();
     }
