@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SampleFruits5 : BulletCurve
+public class SampleFruits2 : BulletStraight
 {
-    public SampleFruits5()
+    public SampleFruits2()
     {
         this.power = 10;//攻撃力
         this.shootRange = 6f;//射程

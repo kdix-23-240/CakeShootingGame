@@ -20,12 +20,12 @@ public class FruitsFactory
 
             // case 1:
 
+            case 1:
+                return new SampleFruits1();
             case 2:
-                return new SampleFruits3();
+                return new SampleFruits2();
             case 3:
-                return new SampleFruits4();
-            case 4:
-                return new SampleFruits5();
+                return new SampleFruits3();
             case 99:
                 return new SampleFruitsB();
             default:

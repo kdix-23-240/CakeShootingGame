@@ -16,7 +16,8 @@ public class StageSceneChanger : MonoBehaviour
     public void GoToScene()
     {
         SelectedStageKeeper.GetInstance().SetSelectedStage(this.destinationScene);
-        SceneManager.LoadScene("MachineSelect");
+        // SceneManager.LoadScene("MachineSelect");
+        SceneManager.LoadScene("IngredientSelect");
     }
 
     public string GetDestinationScene()

@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SampleCream3 : BulletStraight
+public class SampleCream1 : BulletStraight
 {
-    public SampleCream3()
+    public SampleCream1()
     {
         this.power = 1;//攻撃力
         this.shootRange = 6f;//射程

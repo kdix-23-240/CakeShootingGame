@@ -22,6 +22,7 @@ public class Bomb : Bullet
     /// <param name="collider">弾に当たったもののオブジェクト</param>
     void OnTriggerEnter2D(Collider2D collider)
     {
+        if(collider.gameObject.tag != "Enemy") return;
         pos = this.transform.position;
         //レンダリングの都合的に爆発範囲が大きい方から
         GameObject bombObj1 = Instantiate(bulletBomb);
