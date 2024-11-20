@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SampleFruits3 : BulletPersuing
+public class SampleFruits1 : BulletPersuing
 {
-    public SampleFruits3()
+    public SampleFruits1()
     {
         this.power = 5;//攻撃力
         this.shootRange = 6f;//射程

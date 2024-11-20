@@ -18,10 +18,10 @@ public class CreamFactory
             
             // case 1:
 
+            case 1:
+                return new SampleCream1();
             case 2:
-                return new SampleCream3();
-            case 3:
-                return new SampleCream4();
+                return new SampleCream2();
             default:
                 Debug.Log("選択されたクリームが存在しません");
                 return null;

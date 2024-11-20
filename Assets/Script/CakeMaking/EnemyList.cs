@@ -12,7 +12,7 @@ public class EnemyList
     /// </summary>
     private EnemyList()
     {
-        AddEnemy(new Enemy(0, -1, 0));
+        AddEnemy(new Enemy(0, -1, 1));
     }
     public static EnemyList GetInstance()
     {

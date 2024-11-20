@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CakeIngredientSelector : MonoBehaviour
 {
     [SerializeField] private Button button;
-    private string ingredientName;
+    [SerializeField] private string ingredientName;
     private Text buttonText;
     private ListFactory listFactory;
 
@@ -14,7 +14,6 @@ public class CakeIngredientSelector : MonoBehaviour
     {
         this.listFactory = new ListFactory();
         buttonText = button.GetComponentInChildren<Text>();
-        this.ButtonTextController(this.ingredientName);
     }
 
     /// <summary>
@@ -23,6 +22,24 @@ public class CakeIngredientSelector : MonoBehaviour
     public void CountIngredientNum()
     {
         this.listFactory.CreateListManager(1).DeleteContent(this.ingredientName, 1);
+        this.ButtonTextController(this.ingredientName);
+    }
+
+    public void SelectMaterial()
+    {
+        SelectedIngredientKeeper.GetInstance().SetMaterialName(this.ingredientName);
+        this.ButtonTextController(this.ingredientName);
+    }
+
+    public void SelectCream()
+    {
+        SelectedIngredientKeeper.GetInstance().SetCreamName(this.ingredientName);
+        this.ButtonTextController(this.ingredientName);
+    }
+
+    public void SelectFruits()
+    {
+        SelectedIngredientKeeper.GetInstance().SetFruitsName(this.ingredientName);
         this.ButtonTextController(this.ingredientName);
     }
 

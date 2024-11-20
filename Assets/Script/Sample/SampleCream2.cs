@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SampleCream4 : BulletPersuing
+public class SampleCream2 : BulletPersuing
 {
-    public SampleCream4()
+    public SampleCream2()
     {
         this.power = 3;//攻撃力
         this.shootRange = 6f;//射程

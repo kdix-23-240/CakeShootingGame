@@ -14,9 +14,9 @@ public class MaterialFactory
     {
         switch (num)
         {
-            case 0:
-                return new SampleMaterial();
             case 1:
+                return new SampleMaterial1();
+            case 2:
                 return new SampleMaterial2();
             default:
                 Debug.Log("選択された生地が存在しません");
