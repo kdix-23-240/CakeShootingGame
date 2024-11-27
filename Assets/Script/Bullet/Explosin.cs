@@ -6,6 +6,7 @@ public class Explosin : MonoBehaviour
 {
     private CakeList cakeList;
     private bool isExplosion = false;
+    private KilledEnemyNum killedEnemyNum = KilledEnemyNum.GetInstance();
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,7 @@ public class Explosin : MonoBehaviour
         if (hp <= 0)
         {
             Destroy(collider.gameObject);
+            this.killedEnemyNum.AddKilledEnemyNum();
         }
         Debug.Log("Explosion");
         isExplosion = true;

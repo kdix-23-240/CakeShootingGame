@@ -4,50 +4,27 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
+    [SerializeField] private GameObject enemy;
     protected List<GameObject> enemyList;
+    protected List<int> enemyPosList = new List<int> { -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7 };
     /// <summary>
     /// 敵の生成
     /// </summary>
-    public void CreateEnemy(List<GameObject> enemyList)
+    public void CreateEnemy()
     {
-        int i = 0;
-        if (this.enemyList.Count % 2 == 0)
+       int randomXPos = Random.Range(-7, 8);
+        if (this.enemyPosList.Contains(randomXPos))
         {
-            foreach (GameObject enemy in this.enemyList)
-            {
-                if (i % 2 == 0)
-                {
-                    GameObject enemyObject = Instantiate(enemyList[i]);
-                    enemyObject.transform.position = new Vector2((1.5f * (i + 1)), 2);
-                    enemyObject.transform.localScale = new Vector2(1, 1);
-                }
-                else if (i % 2 == 1)
-                {
-                    GameObject enemyObject = Instantiate(enemyList[i]);
-                    enemyObject.transform.position = new Vector2( -1 * (1.5f * i), 2);
-                    enemyObject.transform.localScale = new Vector2(1, 1);
-                }
-                i++;
-            }
+            float randomYPos = Random.Range(0, 100) * 0.01f;
+            GameObject enemyObject = Instantiate(this.enemy);
+            enemyObject.transform.position = new Vector2(randomXPos, randomYPos);
+            enemyObject.transform.localScale = new Vector2(1, 1);
+
+            this.enemyPosList.Remove(randomXPos);
         }
-        else if (this.enemyList.Count % 2 == 1)
+        else
         {
-            foreach (GameObject enemy in this.enemyList)
-            {
-                if (i % 2 == 0)
-                {
-                    GameObject enemyObject = Instantiate(enemyList[i]);
-                    enemyObject.transform.position = new Vector2(i, 2);
-                    enemyObject.transform.localScale = new Vector2(1, 1);
-                }
-                else if (i % 2 == 1)
-                {
-                    GameObject enemyObject = Instantiate(enemyList[i]);
-                    enemyObject.transform.position = new Vector2(-1 * (i + 1), 2);
-                    enemyObject.transform.localScale = new Vector2(1, 1);
-                }
-                i++;
-            }
-        }
+            CreateEnemy();
+        } 
     }
 }
