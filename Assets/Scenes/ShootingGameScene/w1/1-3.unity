@@ -400,6 +400,14 @@ PrefabInstance:
       propertyPath: enemyNum
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7542846722031414938, guid: e76b0fe56bd8c41a79f3b374781a2d37, type: 3}
+      propertyPath: maxEnemyNum
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7542846722031414938, guid: e76b0fe56bd8c41a79f3b374781a2d37, type: 3}
+      propertyPath: minEnemyNum
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7884582678930376232, guid: e76b0fe56bd8c41a79f3b374781a2d37, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

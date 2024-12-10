@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7abacdca9abff492b9aa04d748c02a1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
 --- !u!114 &7542846722031414938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,4 +59,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 7603016271325281178, guid: a7e6f1584266b4540b5d523806805ba0, type: 3}
-  enemyNum: 11
+  minEnemyNum: 3
+  maxEnemyNum: 5

@@ -8,6 +8,7 @@ public abstract class Bullet : MonoBehaviour
     protected Vector3 pos;
     protected float frameCounter;
     protected bool isEnemy;
+    private KilledEnemyNum killedEnemyNum = KilledEnemyNum.GetInstance();
 
     void Start()
     {
@@ -38,6 +39,7 @@ public abstract class Bullet : MonoBehaviour
         if (hp <= 0)
         {
             Destroy(collider.gameObject);
+            this.killedEnemyNum.AddKilledEnemyNum();
         }
         Destroy(this.gameObject);
     }

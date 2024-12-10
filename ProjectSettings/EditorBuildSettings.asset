@@ -35,4 +35,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ShootingGameScene/AreaSelect.unity
     guid: ae7ceaa0decb74b3c9de7ca832e5ac2c
+  - enabled: 1
+    path: Assets/Scenes/ShootingGameScene/w1/1-2.unity
+    guid: 059c0ccce5a084a9185a70b94d8f11d3
+  - enabled: 1
+    path: Assets/Scenes/ShootingGameScene/w1/1-3.unity
+    guid: e4be7ccb254c94c85a5d9f420c8e2adb
+  - enabled: 1
+    path: Assets/Scenes/ShootingGameScene/IngredientSelect.unity
+    guid: 7747f0a63cfe54c8fb5a48fe260ba218
   m_configObjects: {}
